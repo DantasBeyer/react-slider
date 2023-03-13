@@ -1,10 +1,15 @@
 import "./product-image-slider.scss"
 import PropTypes from "prop-types"
-import {Swiper, SwiperSlide} from "swiper/react"
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs } from "swiper"
+import { useState } from "react"
 
 
-function ProductImagesSlider (props) {
+
+
+const ProductImagesSlider = props => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   return (
     <div>
       <Swiper
@@ -12,9 +17,10 @@ function ProductImagesSlider (props) {
       debaixo do quadro de imagens */
         loop={true}
         spaceBetween={10}
-        navigation={true}
+        navigation={true} 
         modules={[Navigation,Thumbs]}
         grabCursos={true}
+        thumbs={{ swiper: thumbsSwiper }}
         className="product-images-slider"
       >
         {
@@ -28,6 +34,7 @@ function ProductImagesSlider (props) {
       <Swiper
       /* colocar para centralizado 
       debaixo do quadro de imagens */
+      
         loop={true}
         spaceBetween={10}
         slidesPerView={4}
@@ -52,4 +59,4 @@ ProductImagesSlider.propTypes = {
   images: PropTypes.array.isRequired
 }
 
-export default ProductImagesSlider
+export default ProductImagesSlider;
