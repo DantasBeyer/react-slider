@@ -2,5 +2,17 @@
 
 * {
   padding: 0;
-  
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b2c49;
+  color: #fff;
+  font-family: "poppings", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }

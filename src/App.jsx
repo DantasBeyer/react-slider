@@ -1,10 +1,26 @@
+import "./App.scss"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/thumbs"
 
-import './App.scss';
+import ProductImagesSlider from './components/product-images-slider.jsx';
+import {productImages} from "./assets"
 
 function App() {
   return (
-    <div>
-      Slider
+    <div style={{
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center"
+    }}>
+      <div style={{
+        width:"800px",
+        height:"700px",
+        backgroundColor:"#fff",
+        padding:"20px"
+      }}>
+        <ProductImagesSlider images={productImages}/>
+      </div>
     </div>
   );
 }
